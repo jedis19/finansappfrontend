@@ -1,0 +1,21 @@
+  <form class="form-signin" #loginForm="ngForm">  
+    <div class="form-label-group">
+      <input type="email" id="inputEmail" class="form-control" name="inputEmail" pattern="^[a-zA-Z0-9_.+-]+@(?:(?:[a-zA-Z0-9-]+\.)?[a-zA-Z]+\.)?(hotmail|gmail)\.com$" #inputEmail="ngModel" [(ngModel)]="model.email" placeholder="Email address" required autofocus>
+      <label for="inputEmail">Email address</label>
+      <div class="alert alert-danger" *ngIf="inputEmail.invalid && inputEmail.dirty">Mail Adresi Gereklidir</div>
+      <div class="alert alert-danger" *ngIf="inputEmail.errors?.pattern && inputEmail.touched">Mail adresinizin gmail veya hotmail olması gerek</div>
+    </div>
+  
+    <div class="form-label-group">
+      <input type="password" id="inputPassword" class="form-control" name="inputPassword" #inputPassword="ngModel" [(ngModel)]="model.password" placeholder="Password" required>
+      <label for="inputPassword">Password</label>
+      <div class="alert alert-danger" *ngIf="inputPassword.invalid && inputPassword.dirty">Şifre Gereklidir</div>
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf= "showError">
+        {{errorMessage}}
+      </div>
+  
+  
+    <button (click)="loggin(model)" [disabled]="loginForm.invalid" class="btn btn-lg btn-primary btn-block" type="submit">Giriş Yap</button>
+
+  </form>

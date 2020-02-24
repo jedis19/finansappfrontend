@@ -1,0 +1,107 @@
+<h3 style="text-align: center;">admin paneldesin</h3>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10" id="leftside">
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                        <button type="button" (click)="isFirstTabClicked()"  class="btn btn-info">Altın</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button"  (click)="isSecondTabClicked()" class="btn btn-info">Döviz</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button"  (click)="isThirdTabClicked()" class="btn btn-info">Sarrafiye</button>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="card text-center">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-6"></div>
+                        <div class="col-3">Alış</div>
+                        <div class="col-3">Satış</div>
+                    </div>
+                </div>
+
+                <ng-container *ngIf="firstTabClicked==true">
+                    <div  class="card" style="display: flex;" *ngFor="let item of myFirstTabArray">
+                        <div class="row">
+                            <div class="col-3" >
+                                <form class="form">
+                                    <div class="form-group mx-sm-3 mb-2">
+                                      <label for="rate" class="sr-only" >Değer</label>
+                                      <input type="number" class="form-control"  name="rate" id="rate" [(ngModel)]="item.currentRate" placeholder="Değer">
+                                    </div>
+                                    <button (click)="onSelect(item.name,item.currentRate)" type="submit" class="btn btn-primary mb-2">Değiştir</button>
+                                  </form>
+                            </div>
+                            <div class="col-3"> <p class="h5">{{item.name}}</p> <small class="text-muted">{{item.values.tarih}}</small></div>
+                            <div class="col-3"x><p class="h6" style="margin-top:4px;">{{item.alis}}</p>
+                            <p class="h6" style="color: sienna;">Şuanki Değer</p>
+                            <p style="color:Red">-{{item.rate}}</p>
+                            </div>
+                            <div class="col-3"><p class="h6" style="margin-top: 4px;">{{item.satis}}</p>
+                                <p class="h6" style="color: sienna;">Şuanki Değer</p>
+                                <p style="color:green">+{{item.rate}}</p>  
+                            </div>
+                        </div>
+                    </div>  
+                </ng-container>
+
+                <ng-container *ngIf="secondTabClicked==true">
+                    <div  class="card" style="display: flex;" *ngFor="let item of mySecondTabArray">
+                        <div class="row">
+                            <div class="col-3" >
+                                <form class="form">
+                                    <div class="form-group mx-sm-3 mb-2">
+                                      <label for="rateInput" class="sr-only">Değer</label>
+                                      <input type="number" class="form-control" id="rateInput" name="rateInput" [(ngModel)]="item.currentRate" placeholder="Değer">
+                                    </div>
+                                    <button (click)="onSelectTwo(item.name,item.currentRate)" type="submit" class="btn btn-primary mb-2">Değiştir</button>
+                                  </form>
+                            </div>
+                            <div class="col-3" ><p class="h5">{{item.name}}</p> <small class="text-muted">{{item.values.tarih}}</small></div>
+                            <div class="col-3"><p class="h6" style="margin-top:4px">{{item.alis}}</p>
+                                <p class="h6" style="color: sienna;">Şuanki Değer</p>
+                                <p style="color:Red">-{{item.rate}}</p>
+                            </div>
+                            <div class="col-3"><p class="h6" style="margin-top: 4px;">{{item.satis}}</p>
+                                <p class="h6" style="color: sienna;">Şuanki Değer</p>
+                                <p style="color:green">+{{item.rate}}</p>
+                            </div>
+                        </div>
+                    </div>  
+                </ng-container>
+
+                <ng-container *ngIf="thirdTabClicked==true">
+                    <div  class="card" style="display: flex;" *ngFor="let item of myThirdTabArray">
+                        <div class="row">
+                            <div class="col-3" >
+                                <form class="form">
+                                    <div class="form-group mx-sm-3 mb-2">
+                                      <label for="rateInput2" class="sr-only">Değer</label>
+                                      <input type="number" class="form-control" [(ngModel)]="item.currentRate" id="rateInput2" name="rateInput2" placeholder="Değer">
+                                    </div>
+                                    <button (click)="onSelectThree(item.name,item.currentRate)" type="submit" class="btn btn-primary mb-2">Değiştir</button>
+                                  </form>
+                            </div>
+                            <div class="col-3" ><p class="h5">{{item.name}}</p> <small class="text-muted">{{item.values.tarih}}</small></div>
+                            <div class="col-3"><p class="h6" style="margin-top:4px">{{item.alis}}</p>
+                                <p class="h6" style="color: sienna;">Şuanki Değer</p>
+                                <p style="color:Red">-{{item.rate}}</p>
+                            </div>
+                            <div class="col-3"><p class="h6" style="margin-top: 4px;">{{item.satis}}</p>
+                                <p class="h6" style="color: sienna;">Şuanki Değer</p>
+                            <p style="color:green">+{{item.rate}}</p>
+                            </div>
+                        </div>
+                    </div>  
+                </ng-container>
+
+            </div>
+        </div> 
+    </div>
+</div>

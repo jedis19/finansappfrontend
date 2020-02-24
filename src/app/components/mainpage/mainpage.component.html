@@ -1,0 +1,61 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4" id="leftside">
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                        <button type="button" (click)="isFirstTabClicked()"  class="btn btn-info">Altın</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button"  (click)="isSecondTabClicked()" class="btn btn-info">Döviz</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button"  (click)="isThirdTabClicked()" class="btn btn-info">Sarrafiye</button>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="card text-center">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-6"></div>
+                        <div class="col-3">Alış</div>
+                        <div class="col-3">Satış</div>
+                    </div>
+                </div>
+
+                <ng-container *ngIf="firstTabClicked==true">
+                    <div  class="card" style="display: flex;" *ngFor="let item of myFirstTabArray">
+                        <div class="row">
+                            <div class="col-6" ><p class="h5">{{item.name}}</p> <small class="text-muted">{{item.values.tarih}}</small></div>
+                            <div class="col-3" style="margin: auto;"><p class="h6" style="margin-top:4px;color: #084c9e;">{{item.alis}}</p></div>
+                            <div class="col-3" style="margin: auto;"><p class="h6" style="margin-top: 4px;color: #084c9e;">{{item.satis}}</p></div>
+                        </div>
+                    </div>  
+                </ng-container>
+
+                <ng-container *ngIf="secondTabClicked==true">
+                    <div  class="card" style="display: flex;" *ngFor="let item of mySecondTabArray">
+                        <div class="row">
+                            <div class="col-6" ><p class="h5">{{item.name}}</p> <small class="text-muted">{{item.values.tarih}}</small></div>
+                            <div class="col-3" style="margin: auto;" ><p class="h6" style="margin-top:4px;color: #084c9e;">{{item.alis}}</p></div>
+                            <div class="col-3" style="margin: auto;"><p class="h6" style="margin-top: 4px;color: #084c9e;">{{item.satis}}</p></div>
+                        </div>
+                    </div>  
+                </ng-container>
+
+                <ng-container *ngIf="thirdTabClicked==true">
+                    <div  class="card" style="display: flex;" *ngFor="let item of myThirdTabArray">
+                        <div class="row">
+                            <div class="col-6" ><p class="h5">{{item.name}}</p> <small class="text-muted">{{item.values.tarih}}</small></div>
+                            <div class="col-3" style="margin: auto;"><p class="h6" style="margin-top:4px;color: #084c9e;">{{item.alis}}</p></div>
+                            <div class="col-3" style="margin: auto;"><p class="h6" style="margin-top: 4px;color: #084c9e;">{{item.satis}}</p></div>
+                        </div>
+                    </div>  
+                </ng-container>
+
+            </div>
+        </div>       
+    </div>
+</div>
