@@ -2,26 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
 
-## Development server
+Uygulamamın çalışır linkine burdan ulaşabilirsiniz: https://finansappdemo.firebaseapp.com/
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Back end heroku'da yüklü olduğu için siteye ilk girdiğinizde değerlere ulaşamazsanız 3 saniye bekleyin ve siteyi yenileyip tekrar deneyin sebebi heroku'da 1 saat boyunca inaktif olan bir uygulama uykuya giriyor ve biri kullandığında tekrar çalışıyor.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![1-1](https://user-images.githubusercontent.com/57501195/75360950-93d27180-58c7-11ea-8b03-072f07004212.jpg)
 
-## Build
+![1-2](https://user-images.githubusercontent.com/57501195/75360959-959c3500-58c7-11ea-8ce3-a5170288da5e.jpg)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+![1-3](https://user-images.githubusercontent.com/57501195/75360962-96cd6200-58c7-11ea-9b72-7507e5a8fb98.jpg)
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+![1-4](https://user-images.githubusercontent.com/57501195/75360972-97fe8f00-58c7-11ea-843f-f9ba6d2c3861.jpg)
