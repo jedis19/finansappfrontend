@@ -14,6 +14,7 @@ import { LoginService } from './services/login.service';
 import { AdminpanelComponent } from './components/adminpanel/adminpanel.component';
 import { LoginGuard } from './components/login/loginGuard';
 import {TruncatePipe} from './pipes/truncate-pipe.component'
+import { IoService } from './services/io.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import {TruncatePipe} from './pipes/truncate-pipe.component'
     FormsModule
     
   ],
-  providers: [DataService,LoginService,LoginGuard],
+  providers: [DataService,LoginService,LoginGuard,IoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

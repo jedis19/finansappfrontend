@@ -18,14 +18,14 @@ export class AdminpanelComponent implements OnInit {
   thirdTabClicked: boolean = false;
   loadedCount = 0;
 
-  dataNamesLine1 = ['altin', 'ons', 'usd', 'euro', 'eur_usd', 'usd_kg', 'eur_kg', 'gumus']
+  dataNamesLine1 = ['ALTIN', 'ONS', 'USDTRY', 'EURTRY', 'EURUSD', 'USDKG', 'EURKG', 'GUMUSTRY']
   realNamesLine1 = ['Has Altın', 'ONS', 'USD/TL', 'EUR/TL', 'Euro/USD', 'USD/Kg', 'Euro/Kg', 'Gümüş']
   ratesLine1 = []
-  dataNamesLine2 = ['usd', 'euro', 'eur_usd', 'usd_kg', 'eur_kg', 'gbp', 'chf', 'jpy', 'cad', 'aud', 'nok', 'dkk', 'sek', 'sar']
+  dataNamesLine2 = ['USDTRY', 'EURTRY', 'EURUSD', 'USDKG', 'EURKG', 'GBPTRY', 'CHFTRY', 'JPYTRY', 'CADTRY', 'AUDTRY', 'NOKTRY', 'DKKTRY', 'SEKTRY', 'SARTRY']
   realNamesLine2 = ['USD/TL', 'EUR/TL', 'Euro/USD', 'USD/Kg', 'Euro/Kg', 'GBP/TL', 'CHF/TL', 'YEN/TL', 'CAD/TL', 'AUD/TL', 'NOK/TL', 'DKK/TL', 'SEK/TL', 'SAR/TL']
   ratesLine2 = []
-  dataNamesLine3 = ['ceyrek_altin', 'eski_ceyrek_altin', 'yarim_altin', 'eski_yarim_altin', 'tam_altin', 'eski_tam_altin', 'ata_cumhuriyet', 'ata_cumhuriyet_eski', 'ata5_yeni', 'ata5_eski', 'ata2_5', 'resat_altin', 'gremese', 'eski_gremese']
-  realNamesLine3 = ['Çeyrek(Yeni)', 'Çeyrek(Eski)', 'Yarım(Yeni)', 'Yarım(Eski)', 'Tam(Yeni)', 'Tam(Eski)', 'Ata(Yeni)', 'Ata(Eski)', 'Ata5(Yeni)', 'Ata5(Eski)', 'Ata2.5', 'Reşat', 'Gremse(Yeni)', 'Gremse(Eski)']
+  dataNamesLine3 = ['CEYREK_YENI', 'CEYREK_ESKI', 'YARIM_YENI', 'YARIM_ESKI', 'TEK_YENI', 'TEK_ESKI', 'ATA_YENI', 'ATA_ESKI', 'ATA5_ESKI', 'ATA5_YENI', 'AYAR14', 'AYAR22', 'GREMESE_YENI', 'GREMESE_ESKI']
+  realNamesLine3 = ['Çeyrek(Yeni)', 'Çeyrek(Eski)', 'Yarım(Yeni)', 'Yarım(Eski)', 'Tam(Yeni)', 'Tam(Eski)', 'Ata(Yeni)', 'Ata(Eski)', 'Ata5(Yeni)', 'Ata5(Eski)', '14 Ayar', '22 Ayar', 'Gremse(Yeni)', 'Gremse(Eski)']
   ratesLine3 = []
 
 

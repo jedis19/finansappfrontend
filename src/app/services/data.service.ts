@@ -13,7 +13,6 @@ export class DataService {
   pathSecond="https://myfinansapp.herokuapp.com/rate"
   getDatas(){
     return this.http.get(this.path).pipe(tap(data => {
-
     }))
   }
 
