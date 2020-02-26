@@ -28,7 +28,7 @@ export class MainpageComponent implements OnInit {
   ratesLine3=[]
   constructor(private dataService:DataService,private ioService:IoService) { 
  
-     
+     //io service
     this.ioService.getDatas().subscribe(data => {
       for (let i = 0; i < this.dataNamesLine1.length; i++) {
         this.changeAllDataLine1(this.dataNamesLine1[i], this.realNamesLine1[i],data,this.ratesLine1[i]);
@@ -132,7 +132,7 @@ export class MainpageComponent implements OnInit {
         }
         this.myFirstTabArray[index].values = value
         this.myFirstTabArray[index].alis = alis-currentDeger
-        this.myFirstTabArray[index].satis = satis-currentDeger
+        this.myFirstTabArray[index].satis = satis+currentDeger
         this.myFirstTabArray[index].satisunchanged = satis
         this.myFirstTabArray[index].alisunchanged = alis
       }
@@ -156,7 +156,7 @@ export class MainpageComponent implements OnInit {
           }
         this.mySecondTabArray[index].values = value
         this.mySecondTabArray[index].alis = alis-currentDeger
-        this.mySecondTabArray[index].satis = satis-currentDeger
+        this.mySecondTabArray[index].satis = satis+currentDeger
         this.mySecondTabArray[index].satisunchanged = satis
         this.mySecondTabArray[index].alisunchanged = alis
       }
@@ -180,7 +180,7 @@ export class MainpageComponent implements OnInit {
       if(element.code===data[""+dataNames].code){
         this.myThirdTabArray[index].values = value
         this.myThirdTabArray[index].alis = alis-currentDeger
-        this.myThirdTabArray[index].satis = satis-currentDeger
+        this.myThirdTabArray[index].satis = satis+currentDeger
         this.myThirdTabArray[index].satisunchanged = satis
         this.myThirdTabArray[index].alisunchanged = alis
       }
@@ -203,5 +203,7 @@ export class MainpageComponent implements OnInit {
     this.secondTabClicked=false;
     this.thirdTabClicked=true;
   }
+
+  
 
 }
